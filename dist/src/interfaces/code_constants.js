@@ -1,0 +1,128 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeConstants = void 0;
+class CodeConstants {
+}
+exports.CodeConstants = CodeConstants;
+CodeConstants.USER_MODEL = "table_user";
+CodeConstants.RACE_MODEL = "table_race";
+CodeConstants.RACE_INVITATION_CODE_MODEL = "table_race_invitation_code";
+CodeConstants.INVITATION_CODE_MODEL = "table_invitation_code";
+CodeConstants.QUIZ_CHALLENGE_MODEL = "table_quiz_challenge";
+CodeConstants.SPECIAL_CHALLENGE_MODEL = "table_special_challenge";
+CodeConstants.PHYSICAL_CHALLENGE_MODEL = "table_physical_challenge";
+CodeConstants.QUIZ_ANSWERS_MODEL = "table_quiz_answers";
+CodeConstants.SPECIAL_ANSWERS_MODEL = "table_special_answers";
+CodeConstants.PHYSICAL_CHALLENGE_LOCATIONS_MODEL = "table_physical_challenge_locations";
+CodeConstants.PHOTO_CHALLENGE_MODEL = "table_photo_challenge";
+CodeConstants.USER_OTP_MODEL = "table_user_otp";
+CodeConstants.RACE_CHECKPOINT_MODEL = "table_race_checkpoints";
+CodeConstants.USER_RACE_CHECKPOINT_MODEL = "table_user_race_checkpoint_history";
+CodeConstants.USER_RACE_CHECKPOINT_HISTORY_MODEL = "table_user_race_checkpoint_history";
+CodeConstants.AUTH_MODEL = "table_auth";
+CodeConstants.FAQ_MODEL = "table_faq";
+CodeConstants.TERM_MODEL = "table_terms_conditions";
+CodeConstants.ROLE_MODEL = "table_role";
+CodeConstants.RACE_TYPE_MODEL = "table_race_type";
+CodeConstants.RACE_TEAM_MODEL = "table_race_teams";
+CodeConstants.RACE_STATUS_MODEL = "table_race_status";
+CodeConstants.RACE_DISCOUNT = "table_race_discount";
+CodeConstants.CURRENCY = "table_currency";
+CodeConstants.PAYMENT = "table_payment";
+CodeConstants.PAYMENT_TRANSACTION = "table_payment_transaction";
+CodeConstants.CHALLENGE_TYPE_MODEL = "table_challenge_type";
+CodeConstants.USER_RACE_CHALLENGE_HISTORY_MODEL = "table_user_race_challenge_history";
+CodeConstants.BOOKING_TYPE_MODEL = "table_booking_type";
+CodeConstants.INVITE_STATUS_MODEL = "table_invite_status";
+CodeConstants.USER_RACE_STATUS_MODEL = "table_user_race_status";
+CodeConstants.TSHIRT_SIZES_MODEL = "table_tshirt_sizes";
+CodeConstants.CHALLENGE_STATUS_MODEL = "table_challenge_status";
+CodeConstants.BOOKING_MODEL = "table_bookings";
+CodeConstants.BOOKING_INVITATION_MODEL = "table_booking_invitation";
+CodeConstants.RACE_PARTICIPANTS_MODEL = "table_race_participants";
+CodeConstants.RACE_EVENTS_MODEL = "table_race_events";
+CodeConstants.USER_RACE_STATS_MODEL = "table_user_race_stats";
+CodeConstants.INVITAION_CODE_MODEL = "table_invitation_codes";
+CodeConstants.CHECKPOINT_CATEGORY_MODEL = "table_checkpoint_category";
+CodeConstants.RACE_MEDIA_MODEL = "table_race_media";
+CodeConstants.RACE_DISCOUNT_MODEL = "table_race_discount";
+CodeConstants.EMAIL_CONTACT_US_MODEL = "table_email_contact_us";
+CodeConstants.POLICY_MODEL = "table_privacy_policy";
+CodeConstants.ONBOARDING_IMAGES_MODEL = "table_onboarding_images";
+CodeConstants.JWT_KEY = "jklkjldsjgfkjghdfjkghfhkfhgf";
+CodeConstants.JWT_EXPIRY_TIME = "365d";
+CodeConstants.BOOKING_TYPE_INDIVIDUAL = "Individual";
+CodeConstants.BOOKING_TYPE_TEAM = "Team";
+CodeConstants.OTP_SENT = "Otp Sent Successfully";
+CodeConstants.OTP_VALIDATED = "Valid Otp";
+CodeConstants.RESET_PASS_SUCCESS = "Reset password successful";
+CodeConstants.CHANGE_PASS_SUCCESS = "Your password has been changed successfully";
+CodeConstants.OTP_SEND = "OTP Send Successfully!";
+CodeConstants.USER_REGISTERED = "User Registered Successfully!";
+CodeConstants.USER_CREATED = "User Created Successfully! Check email for more info";
+CodeConstants.RACE_REGISTERED = "Race Registered Successfully!";
+CodeConstants.SUCCESSFULLY_UPDATED = "Record successfully updated!";
+CodeConstants.SUCCESSFULLY_BULK_CREATED = "Records successfully created!";
+CodeConstants.USER_LOGOUT = "Your account logged out successfully";
+CodeConstants.BOOKING_CONFIRMED = "Congratulations! Your booking has been confirmed";
+CodeConstants.BOOKING_NOT_FOUND = "No booking need for practice";
+CodeConstants.BOOKING_ACTIVATION = "Update booking activation successfully";
+CodeConstants.USER_ALREADY_REGISTERED = "User already registerd for the race.";
+CodeConstants.RACE_EVENT_NOT_MATCH = "Race Event not belong to that Race.";
+CodeConstants.NO_PARTICIPANTS = "No participants found with the ID";
+CodeConstants.USER_ALREADY_REGISTERED_FOR_THE_RACE = "User already registered for the race.";
+CodeConstants.INVITATION_STATUS = "Pending";
+CodeConstants.USER_RACE_STATUS = "Started";
+CodeConstants.RACE_INACTIVE_STATUS = "Inactive";
+CodeConstants.RACE_ACTIVE_STATUS = "Active";
+CodeConstants.RACE_STARTED = "The race is start";
+CodeConstants.CHECKPOINTS_DATA_UPDATED = "Checkpoints data updated";
+CodeConstants.RACE_STATS_UPDATED = "User race stats data updated";
+CodeConstants.RECORD_UPDATED = "The challenge history has been updated";
+CodeConstants.PRACTICE_RECORD_UPDATED = "The practice challenge record has been updated";
+CodeConstants.NO_CHALLNEGE = "No challenge found with the ID";
+CodeConstants.NO_CHECKPOINT = "Checkpoint not belong to this race ID";
+CodeConstants.CHALLENGE_PHYSICAL = "Physical";
+CodeConstants.CHALLENGE_QUIZ = "Quiz";
+CodeConstants.CHALLENGE_PHOTO = "Photo";
+CodeConstants.CHALLENGE_SPECIAL = "Special";
+CodeConstants.NEW_CHALLENGE_HISTORY = "A new challenge record has been added";
+CodeConstants.NEW_PRACTICE_CHALLENGE_ADDED = "A new practice record has been added";
+CodeConstants.TOTAL_STARPOINTS = "sum";
+CodeConstants.AVG_STARPOINTS = "avg";
+CodeConstants.AVG_TYPE = 0;
+CodeConstants.MAX_TYPE = 1;
+CodeConstants.FIRST_ENTRY = 2;
+CodeConstants.RACE_END = "Ended";
+CodeConstants.RACE_TYPE_PREMIUM = "Premium";
+CodeConstants.RACE_TYPE_PREMIUM_PRAD = "Premium Paid";
+CodeConstants.RACE_TYPE_PRACTICE = "Practice";
+CodeConstants.RACE_LIVE = "Live";
+CodeConstants.RACE_NOT_STARTED = "Not Started";
+CodeConstants.NO_RANK = "No record for practice race ID";
+CodeConstants.CHALLENGE_QUIT = "Quit";
+CodeConstants.CHALLENGE_FAIL = "Fail";
+CodeConstants.CHALLENGE_COMPLETE = "Complete";
+CodeConstants.RACE_COMPLETE = "Completed";
+CodeConstants.RACE_FINISH = "Finished";
+CodeConstants.NEW_RACE_CREATED = "A new race has been created Successfully!";
+CodeConstants.NEW_EVENTS_CRETAED = "New events created Successfully!";
+CodeConstants.NEW_IMAGE = "A new image has been uploaded successfully.";
+CodeConstants.DELETE_RACE = "The record has been deleted successfully.";
+CodeConstants.DELETE_USER_LEADERBOARD = "The record has been deleted successfully.";
+CodeConstants.NEW_ADMIN = "A new admin is created successfully.";
+CodeConstants.DELETE_ADMIN = "The Admin record has been deleted successfully";
+CodeConstants.DELETE_USER = "The user record has been deleted successfully";
+CodeConstants.EMAIL_SENT_TO_ADMIN = "The email has been sent to the admin successfully";
+CodeConstants.NEW_RECORD = "A new record has been added";
+CodeConstants.ROLES = {
+    ADMIN: "Admin",
+    RUNNER: "Runner",
+    SUPER_ADMIN: "Super_Admin"
+};
+CodeConstants.MEDIA_TYPES = {
+    Race_Media: "Race_Media",
+    Checkpoints_Icon: "Checkpoints_Icon",
+    Checkpoints_Image: "Checkpoints_Image",
+    Challenges_Icon: "Challenges_Icon"
+};

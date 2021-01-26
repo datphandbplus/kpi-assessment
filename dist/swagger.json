@@ -1,0 +1,643 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "license": {
+            "name": "Cty: DBPlus",
+            "url": "https://lezo.dbplus.com.vn/"
+        },
+        "contact": {
+            "email": "dat.phan@dbplus.com.vn",
+            "name": ": Phan Minh Đạt - Mobile: (+84) 078.766.7497"
+        },
+        "version": "1.0.0",
+        "title": "KPI Assessment Document API",
+        "description": "KPI Assessment Document API - Version 1"
+    },
+    "basePath": "/api",
+    "schemes": [
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/admin/login": {
+            "post": {
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "Login An Employee. Get admin details and token",
+                "description": "Authenticate the employee",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseLogin"
+                        }
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "401": {
+                        "description": "You are not authorized"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                }
+            }
+        },
+        "/admin/system-info": {
+            "get": {
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "Get system info",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Get all employees in system",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "search",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "filter",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "required": true,
+                        "type": "integer",
+                        "default": 0,
+                        "description": "Enter page index"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "required": true,
+                        "type": "integer",
+                        "default": 10,
+                        "description": "Enter page size"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sort",
+                        "required": true,
+                        "type": "string",
+                        "default": "id"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "required": true,
+                        "type": "string",
+                        "default": "ASC"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees/employees_assessment_list": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Get all employees assessment in same department with login user",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "search",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "filter",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "required": true,
+                        "type": "integer",
+                        "default": 0,
+                        "description": "Enter page index"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "required": true,
+                        "type": "integer",
+                        "default": 10,
+                        "description": "Enter page size"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sort",
+                        "required": true,
+                        "type": "string",
+                        "default": "id"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "required": true,
+                        "type": "string",
+                        "default": "ASC"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees/departments": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Get all departments",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees/{id}": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Get profile details of the employee",
+                "description": "Get Profile details By Id as a parameter",
+                "parameters": [{
+                    "in": "path",
+                    "name": "id",
+                    "required": true,
+                    "type": "integer"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees/update": {
+            "post": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Update employee",
+                "description": "Update employee",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "full_name": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "position": {
+                                    "type": "string"
+                                },
+                                "department_id": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees/assessment_survey_submit": {
+            "post": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Update employee assessments",
+                "description": "Update employee assessments",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees/surveys/update": {
+            "post": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Update survey",
+                "description": "Update survey",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees/assessment_survey": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "description": "Get assessment info",
+                "parameters": [{
+                    "in": "path",
+                    "name": "assessment_year",
+                    "required": true,
+                    "type": "integer"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/employees/surveys": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "description": "Get surveys list",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "search",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "required": true,
+                        "type": "integer",
+                        "default": 0,
+                        "description": "Enter page index"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "required": true,
+                        "type": "integer",
+                        "default": 10,
+                        "description": "Enter page size"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sort",
+                        "required": true,
+                        "type": "string",
+                        "default": "id"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "required": true,
+                        "type": "string",
+                        "default": "ASC"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/mail/send-email/{id}": {
+            "get": {
+                "tags": [
+                    "Email"
+                ],
+                "description": "Demo send email",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        },
+        "/mail/send-emails": {
+            "get": {
+                "tags": [
+                    "Email"
+                ],
+                "description": "Send emails for assessment",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "emails",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {}
+                    },
+                    "400": {
+                        "description": "opertaion failed"
+                    },
+                    "500": {
+                        "description": "opertaion failed"
+                    }
+                },
+                "security": [{
+                    "JWT": []
+                }]
+            }
+        }
+    },
+    "securityDefinitions": {
+        "JWT": {
+            "type": "apiKey",
+            "name": "access_token",
+            "in": "header"
+        }
+    },
+    "definitions": {
+        "Token": {
+            "type": "string",
+            "properties": {
+                "token": {
+                    "type": "string"
+                }
+            }
+        },
+        "Logout": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "data": {
+                    "type": "object",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "success": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "LoginUserData": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "gender": {
+                    "type": "integer",
+                    "format": "int1"
+                },
+                "date_of_birth": {
+                    "type": "string"
+                },
+                "is_verified": {
+                    "type": "boolean"
+                },
+                "profile_image_url": {
+                    "type": "string"
+                },
+                "token": {
+                    "$ref": "#/definitions/Token"
+                }
+            }
+        },
+        "ResponseLogin": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "data": {
+                    "$ref": "#/definitions/LoginUserData"
+                }
+            }
+        }
+    }
+}
